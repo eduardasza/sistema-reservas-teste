@@ -1,0 +1,36 @@
+<%- include('partials/header') %>
+
+<h3>Reservar Sala</h3>
+<form method="POST" action="/reservas/nova" class="mb-4">
+  <select name="sala_id" class="form-select mb-2" required>
+    <option value="">Selecione uma sala</option>
+    <% salas.forEach(s => { %>
+      <option value="<%= s.id %>"><%= s.nome %></option>
+    <% }) %>
+  </select>
+  <input name="data" type="date" class="form-control mb-2" required>
+  <input name="hora" type="time" class="form-control mb-2" required>
+  <button class="btn-m">Reservar</button>
+</form>
+
+<h4>Minhas Reservas</h4>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Sala</th>
+      <th>Data</th>
+      <th>Hora</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% reservas.forEach(r => { %>
+      <tr>
+        <td><%= r.sala %></td>
+        <td><%= r.data %></td>
+        <td><%= r.hora %></td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>
+
+<%- include('partials/footer') %>

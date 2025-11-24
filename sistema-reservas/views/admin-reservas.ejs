@@ -1,0 +1,26 @@
+<%- include('partials/header') %>
+
+<h3>Reservas Cadastradas</h3>
+
+<table class="table table-bordered mt-3">
+  <thead>
+    <tr>
+      <th>Usuário</th>
+      <th>Sala</th>
+      <th>Data</th>
+      <th>Hora</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% reservas.forEach(r => { %>
+      <tr>
+        <td><%= r.usuario %></td>
+        <td><%= r.sala %></td>
+        <td><%= r.data %></td>
+        <td><%= r.hora %></td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,40 @@
+<%- include('partials/header') %>
+
+<h3>Gerenciamento de Salas</h3>
+
+<form method="POST" action="/admin/salas/nova" class="mb-4 mt-3">
+  <div class="input-group">
+    <input type="text" name="nome" class="form-control" placeholder="Nome da sala" required>
+    <input type="number" name="capacidade" class="form-control" placeholder="Capacidade">
+    <input type="text" name="descricao" class="form-control" placeholder="Descrição">
+    <button class="btn">Adicionar Sala</button>
+  </div>
+</form>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Nome da Sala</th>
+      <th>Capacidade</th>
+      <th>Descrição</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% salas.forEach(s => { %>
+      <tr>
+        <td><%= s.nome %></td>
+        <td><%= s.capacidade || '-' %></td>
+        <td><%= s.descricao || '-' %></td>
+        <td>
+          <!-- Formulário de excluir sala -->
+          <form method="POST" action="/admin/salas/excluir/<%= s.id %>" style="display:inline">
+            <button class="btn-excluir">Excluir</button>
+          </form>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>
+
+<%- include('partials/footer') %>

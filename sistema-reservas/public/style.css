@@ -1,0 +1,71 @@
+body {
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #b663ab;
+}
+
+.navbar .navbar-brand {
+  color: rgb(255, 255, 255) !important;
+  font-weight: bold;
+}
+
+.navbar .btn {
+  font-size: 0.9 rem;
+}
+
+.btn {
+  background-color: #b663ab ;
+  color: white;
+  border: none;
+  font-size: 1.6rem;
+  padding:0 1rem;
+  border-radius:10px; 
+  height: 100%;
+  border:none;
+}
+
+.btn-excluir {
+  background-color:#b663ab;
+  color: rgb(255, 255, 255);
+  border-radius:5px; 
+}
+.btn-m {
+  background-color: #b663ab ;
+  color: white;
+  border:none;
+  border-radius:10px;
+}
+
+.btn-light {
+  color:#b663ab;
+}
+
+table {
+  width: 100%;
+  background-color: white;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  border: 1px solid #dee2e6;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+input.form-control {
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  background-color: #e9ecef;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #495057;
+}
